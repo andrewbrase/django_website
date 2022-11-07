@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from basic_app.forms import UserForm, UserProfileInfoForm
+import time
 # Create your views here.
 
 def index(request):
@@ -10,6 +11,7 @@ def home(request):
 
 def register(request):
     registered = False
+ 
     if request.method == 'POST':
         user_form = UserForm(data=request.POST)
         profile_form = UserProfileInfoForm(data=request.POST)
@@ -26,8 +28,9 @@ def register(request):
                 profile.profile_pic = request.FILES['profile_pic']
 
             profile.save()
-
+        
             registered = True
+            
         else:
             print(user_form.errors, profile_form.errors)
     else:

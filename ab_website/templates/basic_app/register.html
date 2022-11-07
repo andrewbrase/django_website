@@ -7,7 +7,11 @@
 
     {% if registered %}
     <h1>Thank you for registering!</h1>
-
+    <script>
+        setTimeout(() => {
+            window.location.href = "/basic_app/Home/";
+        }, "2000")
+    </script>
     {% else %}
     <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}

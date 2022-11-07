@@ -23,11 +23,21 @@ body {
                 color: $fontcolor;
                 text-decoration: none;
             }
+
+            a:hover {
+                text-decoration: underline;
+            }
         }
     }
 
     .cont {
         margin-top: 10%;
         margin-left: 10%;
+
+        ul {
+            li {
+                color: red;
+            }
+        }
     }
 }

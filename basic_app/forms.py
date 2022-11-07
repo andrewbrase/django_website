@@ -3,7 +3,10 @@ from django.contrib.auth.models import User
 from basic_app.models import UserProfileInfo
 
 class UserForm(forms.ModelForm):
-    password = forms.CharField(widget=forms.PasswordInput())
+    username = forms.CharField(label='Username:', widget=forms.TextInput(attrs={'placeholder': 'Username', 'required': 'true'}))
+    email = forms.CharField(label='Email:', widget=forms.TextInput(attrs={'placeholder': 'example@domain.com', 'required': 'true'}))
+    password = forms.CharField(label='Password:', widget=forms.PasswordInput(attrs={'placeholder': 'Password', 'required': 'true'}))
+
     class Meta():
         model = User
         fields = ('username','password','email')
