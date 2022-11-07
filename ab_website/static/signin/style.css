@@ -1,0 +1,61 @@
+@font-face {
+  font-family: externalFont;
+  src: url(../fonts/Questrial-Regular.ttf);
+}
+body {
+  font-family: externalFont;
+  background-image: url("../../static/imgs/code.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+body .signin-cont {
+  margin-top: 10%;
+  background-color: rgb(39, 39, 39);
+  border-radius: 15px;
+  padding: 10px;
+  text-align: center;
+  width: 30%;
+  min-width: 300px;
+  height: fit-content;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  color: rgb(231, 239, 245);
+}
+body .signin-cont a {
+  text-decoration: underline;
+  color: rgb(231, 239, 245);
+}
+body .signin-cont .signin-inp input {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  border-radius: 10px;
+  border-style: none;
+  padding: 10px;
+  margin-top: 10px;
+}
+body .signin-cont .signin-inp input:hover {
+  background-color: rgb(221, 221, 221);
+}
+body .signin-cont .signin-inp button {
+  border-radius: 10px;
+  border-style: none;
+  padding: 10px;
+  margin-top: 10px;
+}
+body .signin-cont .signin-inp button:hover {
+  background-color: rgb(221, 221, 221);
+}
+body .visit {
+  text-align: center;
+  text-shadow: 0px 0px 13px rgb(0, 0, 0);
+}
+body .visit a {
+  text-decoration: underline;
+  color: rgb(231, 239, 245);
+}
+
+/*# sourceMappingURL=style.css.map */

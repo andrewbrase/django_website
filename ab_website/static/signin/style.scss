@@ -1,0 +1,82 @@
+// >sass style.sass:style.css
+// >sass --watch style.scss:style.css
+
+$fontcolor: rgb(231, 239, 245);
+$hovercolor: rgb(221, 221, 221);
+$bb: rgb(39, 39, 39);
+
+@font-face {
+    font-family:externalFont;
+    src: url(../fonts/Questrial-Regular.ttf)
+}
+
+@mixin addpadd {
+    border-radius: 10px;
+    border-style: none;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+body {
+    
+    font-family:externalFont;
+    background-image: url("../../static/imgs/code.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    // overflow: hidden;
+    
+    .signin-cont {
+        // position: fixed;
+        margin-top: 10%;
+        background-color: $bb;
+        border-radius: 15px;
+        padding: 10px;
+        text-align: center;
+        width: 30%;
+        min-width: 300px;
+        height: fit-content;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        color: $fontcolor;
+
+        a {
+            text-decoration: underline;
+            color: $fontcolor;
+        }
+
+        .signin-inp {
+            input {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                padding: 10px;
+
+                @include addpadd()
+            }
+
+            input:hover {
+                background-color: $hovercolor;
+            }
+
+            button {
+                @include addpadd()
+            }
+
+            button:hover {
+                background-color: $hovercolor;
+            }
+        }
+    }
+
+    .visit {
+        text-align: center;
+        text-shadow: 0px 0px 13px rgba(0, 0, 0, 1);
+
+        a {
+            text-decoration: underline;
+            color: $fontcolor;
+        }
+    }
+}
