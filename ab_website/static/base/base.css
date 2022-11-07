@@ -66,6 +66,7 @@ body .visit a:hover {
 
 body {
   background-image: none;
+  font-size: 1.5em;
 }
 body nav {
   margin-top: -9%;
