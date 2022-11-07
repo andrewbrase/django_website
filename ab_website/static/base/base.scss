@@ -42,3 +42,14 @@ body {
         }
     }
 }
+
+@media (orientation: portrait),
+(max-width:1108px) {
+    body {
+        nav {
+            font-size: .8em;
+            position: relative;
+            margin-top: 2%;
+        }
+    }
+}

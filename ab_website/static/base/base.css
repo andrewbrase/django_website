@@ -3,6 +3,7 @@
   src: url(../fonts/Questrial-Regular.ttf);
 }
 body {
+  font-size: 1.5em;
   font-family: externalFont;
   background-image: url("../../static/imgs/code.jpg");
   background-repeat: no-repeat;
@@ -96,6 +97,14 @@ body .cont {
 }
 body .cont ul li {
   color: red;
+}
+
+@media (orientation: portrait), (max-width: 1108px) {
+  body nav {
+    font-size: 0.8em;
+    position: relative;
+    margin-top: 2%;
+  }
 }
 
 /*# sourceMappingURL=base.css.map */
