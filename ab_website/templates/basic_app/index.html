@@ -15,20 +15,30 @@
     <section class="sign-in-back">
         <div class="signin-cont">
             <h1>Sign in</h1>
-            <form>
+            
+            <form action="{% url 'basic_app:signin' %}" method="POST">
+
+                {% csrf_token %}
                 <div class="signin-inp">
                     <div class="cred">
-                        <input type="text" placeholder="Username" required>
-                        <input type="password" placeholder="Password" required>
+
+                        <!-- <label for="username">Username:</label> -->
+                        <input type="text" name="username" placeholder="Username">
+
+                        <!-- <label for="password">Password:</label> -->
+                        <input type="password" name="password" placeholder="Password"> 
                     </div>
-                    <button type="submit" value="Sign in">Sign in</button>
+                
+                    <button type="submit" value="Signin">Sign in</button>
+
                 </div>
             </form>
             <h3><a href="{% url 'basic_app:register' %}">Register now! </a></h3>
             <h3><a href="">Forgot password</a></h3>
         </div>
         <div class="visit">
-            <h3><a href="{% url 'basic_app:home' %}">Visit without signing in</a></h3>
+            <h4><a href="{% url 'basic_app:home' %}">Visit without signing in</a></h4>
+            <h5>(some features will require being signed in)</h5>
         </div>
     </section>
 </body>

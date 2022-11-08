@@ -9,6 +9,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
+  color: rgb(231, 239, 245);
 }
 body .signin-cont {
   margin-top: 10%;
@@ -88,9 +89,20 @@ body nav li a {
   text-decoration: none;
 }
 body nav li a:hover {
+  color: aquamarine;
+  text-decoration: underline;
+}
+body nav .user {
+  display: inline;
+  color: rgb(231, 239, 245);
+  float: right;
+}
+body nav .user:hover {
+  color: aquamarine;
   text-decoration: underline;
 }
 body .cont {
+  color: rgb(39, 39, 39);
   margin-left: 25px;
 }
 body .cont h1 {

@@ -9,6 +9,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
+  color: rgb(231, 239, 245);
 }
 body .signin-cont {
   margin-top: 10%;

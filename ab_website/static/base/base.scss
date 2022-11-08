@@ -24,8 +24,20 @@ body {
             }
 
             a:hover {
+                color: aquamarine;
                 text-decoration: underline;
             }
+        }
+
+        .user {
+            display: inline;
+            color: $fontcolor;
+            float: right;
+        }
+
+        .user:hover {
+            color: aquamarine;
+            text-decoration: underline;
         }
     }
 
@@ -34,6 +46,7 @@ body {
             font-size: 1.8em;
         }
 
+        color: $bb;
         margin-left: 25px;
 
         ul {

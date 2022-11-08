@@ -14,10 +14,26 @@
     <nav>
         <ul>
             <li><a href="{% url 'basic_app:home' %}">Home</a></li>
+
+            {% if user.is_authenticated %}
+            <li><a href="{% url 'signout' %}">Sign out</a></li>
+            {% else %}
             <li><a href="{% url 'index' %}">Sign in</a></li>
+            {% endif %}
+
             <li><a href="{% url 'basic_app:register' %}">Register</a></li>
-            <li><a href="">Contact</a></li>
+
+            {% if user.is_authenticated %}
+            <li><a href="{% url 'basic_app:contact' %}">Contact</a></li>
+            {% endif %}
+
+            {% if user.is_staff %}
             <li><a href="{% url 'admin:index' %}">Admin</a></li>
+            {% endif %}
+
+            {% if user.is_authenticated %}
+            <h3 class="user">{{request.user.username}}</h3>
+            {% endif %}
         </ul>
     </nav>
 
