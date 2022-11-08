@@ -27,6 +27,7 @@
             <li><a href="{% url 'basic_app:contact' %}">Contact</a></li>
             {% endif %}
 
+            <hr>
             {% if user.is_staff %}
             <li><a href="{% url 'admin:index' %}">Admin</a></li>
             {% endif %}

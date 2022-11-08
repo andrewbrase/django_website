@@ -12,6 +12,7 @@ body {
         background-color: $bb;
         margin-left: auto;
         margin-right: auto;
+        overflow: hidden;
 
         li {
             margin-left: 15px;
@@ -29,7 +30,13 @@ body {
             }
         }
 
+        hr {
+            margin-right: 40px;
+            border: 2px solid $fontcolor
+        }
+
         .user {
+            margin-right: 40px;
             display: inline;
             color: $fontcolor;
             float: right;
