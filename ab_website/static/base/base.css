@@ -17,7 +17,8 @@ body .signin-cont {
   padding: 10px;
   text-align: center;
   width: 30%;
-  min-width: 300px;
+  min-width: 400px;
+  max-width: 400px;
   height: fit-content;
   position: relative;
   margin-left: auto;
@@ -90,7 +91,10 @@ body nav li a:hover {
   text-decoration: underline;
 }
 body .cont {
-  margin-left: 20px;
+  margin-left: 25px;
+}
+body .cont h1 {
+  font-size: 1.8em;
 }
 body .cont ul li {
   color: red;
