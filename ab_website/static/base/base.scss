@@ -6,14 +6,12 @@ body {
     font-size: 1.5em;
 
     nav {
-        margin-top: -9%;
-        position: fixed;
         width: 95%;
         height: fit-content;
         padding: 10px;
         background-color: $bb;
-        left: 50%;
-        transform: translateX(-50%);
+        margin-left: auto;
+        margin-right: auto;
 
         li {
             margin-left: 15px;
@@ -32,9 +30,7 @@ body {
     }
 
     .cont {
-        margin-top: 10%;
-        margin-left: 10%;
-
+        margin-left: 20px;
         ul {
             li {
                 color: red;
@@ -48,8 +44,6 @@ body {
     body {
         nav {
             font-size: .8em;
-            position: relative;
-            margin-top: 2%;
         }
     }
 }

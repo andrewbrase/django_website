@@ -70,14 +70,12 @@ body {
   font-size: 1.5em;
 }
 body nav {
-  margin-top: -9%;
-  position: fixed;
   width: 95%;
   height: fit-content;
   padding: 10px;
   background-color: rgb(39, 39, 39);
-  left: 50%;
-  transform: translateX(-50%);
+  margin-left: auto;
+  margin-right: auto;
 }
 body nav li {
   margin-left: 15px;
@@ -92,8 +90,7 @@ body nav li a:hover {
   text-decoration: underline;
 }
 body .cont {
-  margin-top: 10%;
-  margin-left: 10%;
+  margin-left: 20px;
 }
 body .cont ul li {
   color: red;
@@ -102,8 +99,6 @@ body .cont ul li {
 @media (orientation: portrait), (max-width: 1108px) {
   body nav {
     font-size: 0.8em;
-    position: relative;
-    margin-top: 2%;
   }
 }
 
