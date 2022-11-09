@@ -26,6 +26,9 @@ body .signin-cont {
   margin-right: auto;
   color: rgb(231, 239, 245);
 }
+body .signin-cont .err {
+  color: rgb(187, 63, 63);
+}
 body .signin-cont a {
   text-decoration: none;
   color: rgb(231, 239, 245);
@@ -88,9 +91,13 @@ body nav li {
 body nav li a {
   color: rgb(231, 239, 245);
   text-decoration: none;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
 }
 body nav li a:hover {
-  color: aquamarine;
+  color: rgb(77, 218, 171);
   text-decoration: underline;
 }
 body nav hr {
@@ -102,14 +109,21 @@ body nav .user {
   display: inline;
   color: rgb(231, 239, 245);
   float: right;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
 }
 body nav .user:hover {
-  color: aquamarine;
+  color: rgb(86, 244, 191);
   text-decoration: underline;
 }
 body .cont {
   color: rgb(39, 39, 39);
-  margin-left: 25px;
+  width: 95%;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
 }
 body .cont h1 {
   font-size: 1.8em;
@@ -121,6 +135,9 @@ body .cont ul li {
 @media (orientation: portrait), (max-width: 1108px) {
   body nav {
     font-size: 0.8em;
+  }
+  body .user {
+    font-size: 0.9em;
   }
 }
 

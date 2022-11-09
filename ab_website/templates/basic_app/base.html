@@ -14,7 +14,6 @@
     <nav>
         <ul>
             <li><a href="{% url 'basic_app:home' %}">Home</a></li>
-
             {% if user.is_authenticated %}
             <li><a href="{% url 'signout' %}">Sign out</a></li>
             {% else %}
@@ -34,6 +33,10 @@
 
             {% if user.is_authenticated %}
             <h3 class="user">{{request.user.username}}</h3>
+            {% endif %}
+
+            {% if user.is_authenticated == False %}
+            <li>Sign in for more features</li>
             {% endif %}
         </ul>
     </nav>

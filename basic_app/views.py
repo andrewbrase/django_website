@@ -69,9 +69,10 @@ def signin(request):
             else:
                 return HttpResponse("Account is not active, cannot sign in")
         else:
-            print("Someone tried to login and failed!")
-            print(f"Attempted login : {usern}, {passw}")
-            return HttpResponse('Invalid login credentials provided, please try again')
+            # print("Someone tried to login and failed!")
+            # print(f"Attempted login : {usern}, {passw}")
+            err_message = True
+            return render(request, 'basic_app/index.html', {'err_message':err_message})
     else:
         return render(request, 'basic_app/index.html', {})
 

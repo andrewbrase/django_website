@@ -22,10 +22,14 @@ body {
             a {
                 color: $fontcolor;
                 text-decoration: none;
+                -moz-transition: all .2s ease-in;
+                -o-transition: all .2s ease-in;
+                -webkit-transition: all .2s ease-in;
+                transition: all .2s ease-in;
             }
 
             a:hover {
-                color: aquamarine;
+                color: rgb(77, 218, 171);
                 text-decoration: underline;
             }
         }
@@ -40,10 +44,14 @@ body {
             display: inline;
             color: $fontcolor;
             float: right;
+            -moz-transition: all .2s ease-in;
+            -o-transition: all .2s ease-in;
+            -webkit-transition: all .2s ease-in;
+            transition: all .2s ease-in;
         }
 
         .user:hover {
-            color: aquamarine;
+            color: rgb(86, 244, 191);
             text-decoration: underline;
         }
     }
@@ -54,7 +62,10 @@ body {
         }
 
         color: $bb;
-        margin-left: 25px;
+        width: 95%;
+        padding: 10px;
+        margin-left: auto;
+        margin-right: auto;
 
         ul {
             li {
@@ -69,6 +80,9 @@ body {
     body {
         nav {
             font-size: .8em;
+        }
+        .user {
+            font-size: .9em;
         }
     }
 }

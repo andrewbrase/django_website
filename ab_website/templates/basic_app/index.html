@@ -15,7 +15,9 @@
     <section class="sign-in-back">
         <div class="signin-cont">
             <h1>Sign in</h1>
-            
+            {% if err_message %}
+            <h6 class="err">Invalid login credentials provided, please try again*</h6>
+            {% endif %}
             <form action="{% url 'basic_app:signin' %}" method="POST">
 
                 {% csrf_token %}
@@ -33,14 +35,15 @@
 
                 </div>
             </form>
-            <h3><a href="{% url 'basic_app:register' %}">Register now! </a></h3>
-            <h3><a href="">Forgot password</a></h3>
+            <h2><a href="{% url 'basic_app:register' %}">Register now! </a></h2>
+            <h4><a href="">Forgot password</a></h4>
         </div>
         <div class="visit">
             <h4><a href="{% url 'basic_app:home' %}">Visit without signing in</a></h4>
             <h5>(Some features will require being signed in)</h5>
         </div>
     </section>
+
 </body>
 
 </html>

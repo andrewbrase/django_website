@@ -25,24 +25,27 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
-    // overflow: hidden;
     color: $fontcolor;
     
     .signin-cont {
-        // position: fixed;
-        margin-top: 10%;
+
+        margin-top: 5%;
         background-color: $bb;
         border-radius: 15px;
         padding: 10px;
         text-align: center;
         width: 30%;
         min-width: 400px;
-        max-width: 400px;
+        max-width: 500px;
         height: fit-content;
         position: relative;
         margin-left: auto;
         margin-right: auto;
         color: $fontcolor;
+
+        .err {
+            color: rgb(187, 63, 63);
+        }
 
         a {
             text-decoration: none;
