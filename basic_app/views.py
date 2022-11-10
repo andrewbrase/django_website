@@ -1,5 +1,12 @@
+# from __future__ import print_function
+# mail
+# import time
+# import sib_api_v3_sdk
+# from sib_api_v3_sdk.rest import ApiException
+# from pprint import pprint
+
 from django.shortcuts import render, redirect
-from basic_app.forms import UserForm, UserProfileInfoForm
+from basic_app.forms import UserForm, UserProfileInfoForm, ContactForm
 
 # signin
 from django.contrib.auth import authenticate, login, logout
@@ -101,4 +108,26 @@ def signout(request):
 @login_required
 def contact(request):
     '''contact page'''
-    return render(request, 'basic_app/contact.html')
+    completed = False
+
+    if request.method == 'POST':
+        contact_form = ContactForm(request.POST)
+
+        if contact_form.is_valid():
+            subject = contact_form.cleaned_data["subject"]
+            message = contact_form.cleaned_data['message']
+            from_email = request.user.email
+
+            print(subject)
+            print(message)
+            print(from_email)
+            # sendinblue/APIv3
+
+            completed = True
+
+    contact_form = ContactForm()
+
+    return render(request, 'basic_app/contact.html', {
+        'contact_form':contact_form, 
+        'completed':completed,
+    })

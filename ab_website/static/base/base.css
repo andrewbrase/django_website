@@ -81,11 +81,11 @@ body {
 body nav {
   width: 95%;
   height: fit-content;
-  padding: 10px;
   background-color: rgb(39, 39, 39);
   margin-left: auto;
   margin-right: auto;
   overflow: hidden;
+  font-size: 1.5em;
 }
 body nav li {
   margin-left: 15px;
@@ -109,6 +109,7 @@ body nav hr {
   border: 2px solid rgb(231, 239, 245);
 }
 body nav .user {
+  font-size: 1em;
   margin-right: 40px;
   display: inline;
   color: rgb(231, 239, 245);
@@ -130,10 +131,12 @@ body .cont {
   margin-right: auto;
 }
 body .cont ::selection {
-  background: #4ddaab; /* WebKit/Blink Browsers */
+  background: #4ddaab;
+  /* WebKit/Blink Browsers */
 }
 body .cont ::-moz-selection {
-  background: #4ddaab; /* Gecko Browsers */
+  background: #4ddaab;
+  /* Gecko Browsers */
 }
 body .cont h1 {
   font-size: 1.8em;
@@ -170,6 +173,14 @@ body .cont .link {
 body .cont .link:hover {
   color: #4ddaab;
 }
+body .cont input {
+  font-size: 0.8em;
+}
+body .cont textarea {
+  resize: none;
+  width: 50%;
+  font-size: 0.8em;
+}
 
 @media (orientation: portrait), (max-width: 1108px) {
   body nav {
@@ -180,6 +191,7 @@ body .cont .link:hover {
   }
   body .cont .home-nav {
     font-size: 0.8em;
+    padding: 8px;
   }
 }
 

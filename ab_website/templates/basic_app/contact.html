@@ -4,7 +4,25 @@
 
 <!-- Contact page, (must be signed in) -->
 <section class="cont">
+    {% if completed %}
+    <h3>Thank you! Your message has been sent</h3>
+    {% endif %}
     <h1>Contact &#9993;</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+
+        <section class="contact">
+        <label for="sub">Subject</label>
+        <p id="sub" class="sub">{{ contact_form.subject }}</p>
+
+        <label for="mes">Message</label>
+        <p is="mes">{{ contact_form.message }}</p>
+
+        <input type="submit" value="Submit">
+    </form>
+    </section>
+
 </section>
 
 {% endblock %}
