@@ -22,8 +22,13 @@ class UserForm(forms.ModelForm):
         if password != confirm_password:
             raise forms.ValidationError(
                 "Passwords to not match, please try again"
-            )  
+            ) 
 
+        if len(password) < 9 or any(char.isdigit() for char in password) != True:
+            raise forms.ValidationError(
+                'Passwords must be longer than 9 characters & include digit(s)'
+            )
+        
     def clean_botcatcher(self):
         botcatcher = self.cleaned_data['botcatcher']
         if len(botcatcher) > 0:
