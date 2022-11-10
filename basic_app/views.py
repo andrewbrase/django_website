@@ -59,6 +59,7 @@ def register(request):
     })
 
 def signin(request):
+    '''sign in page - authenticates users and if they are active sends to homepage'''
     # user has filled out and submitted sign in info
     if request.method == 'POST':
         usern = request.POST.get('username')
@@ -71,6 +72,11 @@ def signin(request):
 
         if user:
             if user.is_active:
+                # "Boolean. Designates whether this user account should be considered active.
+                # We recommend that you set this flag to False instead of deleting accounts; 
+                # that way, if your applications have any foreign keys to users, the foreign
+                # keys won’t break." - Django docs
+
                 login(request, user)
                 return HttpResponseRedirect('/basic_app/Home/')
 
