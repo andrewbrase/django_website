@@ -5,11 +5,13 @@ $fontcolor: rgb(231, 239, 245);
 $hovercolor: rgb(221, 221, 221);
 $bb: rgb(39, 39, 39);
 
+// website font
 @font-face {
     font-family:externalFont;
     src: url(../fonts/Questrial-Regular.ttf)
 }
 
+// add padding and border radius
 @mixin addpadd {
     border-radius: 10px;
     border-style: none;
@@ -17,6 +19,7 @@ $bb: rgb(39, 39, 39);
     margin-top: 10px;
 }
 
+// sign in page scss
 body {
     
     font-size: 1.5em;

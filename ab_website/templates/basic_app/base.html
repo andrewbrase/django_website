@@ -11,36 +11,45 @@
 
 <body>
 
+    <!-- base template for the pages, this includes the nav bar and links -->
     <nav>
         <ul>
             <li><a href="{% url 'basic_app:home' %}">Home</a></li>
+
+            <!-- Sign in and sign out depending on the current status of the user -->
             {% if user.is_authenticated %}
             <li><a href="{% url 'signout' %}">Sign out</a></li>
             {% else %}
             <li><a href="{% url 'index' %}">Sign in</a></li>
             {% endif %}
 
+            <!-- register page link -->
             <li><a href="{% url 'basic_app:register' %}">Register</a></li>
 
+            <!-- contact page link if the user is signed in -->
             {% if user.is_authenticated %}
             <li><a href="{% url 'basic_app:contact' %}">Contact</a></li>
             {% endif %}
 
             <hr>
+            <!-- for the staff users there's a link directly to the admin interface -->
             {% if user.is_staff %}
             <li><a href="{% url 'admin:index' %}">Admin</a></li>
             {% endif %}
 
+            <!-- displays the username of the user if they are logged in -->
             {% if user.is_authenticated %}
             <h3 class="user">{{request.user.username}}</h3>
             {% endif %}
 
+            <!-- this is displayed to notify the users that if they want to use more features, they need to sign in -->
             {% if user.is_authenticated == False %}
             <li>Sign in for more features</li>
             {% endif %}
         </ul>
     </nav>
 
+    <!-- this is where every page that uses this base template will be inserted -->
     <div class="cont">
     {% block body %}
     {% endblock %}

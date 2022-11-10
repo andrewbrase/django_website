@@ -6,9 +6,11 @@
 <section class="cont">
     <h1>Register</h1>
 
+    <!-- if the user registers this will be displayed -->
     {% if registered %}
     <h3>Thank you for registering!</h3>
 
+    <!-- this will redirect the users back to the sign in page after registering -->
     <script>
         setTimeout(() => {
             window.location.href = "/";
@@ -16,6 +18,7 @@
     </script>
     {% else %}
 
+    <!-- if the user is not registered, they will fill the form out and submit -->
     <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         {{ user_form.as_p }}
@@ -25,6 +28,8 @@
         <input type="submit" value="Submit">
     </form>
     {% endif %}
+
+    <!-- link to some more information on hashing algorithms -->
     <h4><a href="https://en.wikipedia.org/wiki/Cryptographic_hash_function" target="_blank" rel="noopener noreferrer">This website uses hashing algorithms*</a></h4>
 
 </section>
