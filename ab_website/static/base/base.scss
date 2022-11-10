@@ -1,6 +1,10 @@
 // sass --watch base.scss:base.css
 @import '../signin/style.scss';
 
+html {
+    scroll-behavior: smooth;
+}
+
 // base template scss
 body {
     background-image: none;
@@ -58,6 +62,15 @@ body {
     }
 
     .cont {
+
+        ::selection {
+            background: #4ddaab; /* WebKit/Blink Browsers */
+        }
+        
+        ::-moz-selection {
+        background: #4ddaab; /* Gecko Browsers */
+        }
+        
         h1 {
             font-size: 1.8em;
         }
@@ -68,10 +81,45 @@ body {
         margin-left: auto;
         margin-right: auto;
 
+        .home-nav {
+
+            background-color: rgb(235, 235, 235);
+            list-style-type: none;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            row-gap: 10px;
+
+            a {
+                text-decoration: none;
+                color: gray;
+            }
+
+            a:hover {
+                color: black;
+            }
+        }
+
         ul {
             li {
                 color: red;
             }
+        }
+
+        .link {
+            -moz-transition: all .2s ease-in;
+            -o-transition: all .2s ease-in;
+            -webkit-transition: all .2s ease-in;
+            transition: all .2s ease-in;
+            color: black;
+        }
+        .link:hover {
+           color: #4ddaab; 
         }
     }
 }
@@ -84,6 +132,11 @@ body {
         }
         .user {
             font-size: .9em;
+        }
+        .cont {
+            .home-nav {
+                font-size: .8em;
+            }
         }
     }
 }

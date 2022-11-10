@@ -12,14 +12,14 @@ body {
   color: rgb(231, 239, 245);
 }
 body .signin-cont {
-  margin-top: 10%;
+  margin-top: 5%;
   background-color: rgb(39, 39, 39);
   border-radius: 15px;
   padding: 10px;
   text-align: center;
   width: 30%;
   min-width: 400px;
-  max-width: 400px;
+  max-width: 500px;
   height: fit-content;
   position: relative;
   margin-left: auto;
@@ -68,6 +68,10 @@ body .visit a {
 }
 body .visit a:hover {
   text-decoration: underline;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -125,11 +129,46 @@ body .cont {
   margin-left: auto;
   margin-right: auto;
 }
+body .cont ::selection {
+  background: #4ddaab; /* WebKit/Blink Browsers */
+}
+body .cont ::-moz-selection {
+  background: #4ddaab; /* Gecko Browsers */
+}
 body .cont h1 {
   font-size: 1.8em;
 }
+body .cont .home-nav {
+  background-color: rgb(235, 235, 235);
+  list-style-type: none;
+  padding: 15px;
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  row-gap: 10px;
+}
+body .cont .home-nav a {
+  text-decoration: none;
+  color: gray;
+}
+body .cont .home-nav a:hover {
+  color: black;
+}
 body .cont ul li {
   color: red;
+}
+body .cont .link {
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  color: black;
+}
+body .cont .link:hover {
+  color: #4ddaab;
 }
 
 @media (orientation: portrait), (max-width: 1108px) {
@@ -138,6 +177,9 @@ body .cont ul li {
   }
   body .user {
     font-size: 0.9em;
+  }
+  body .cont .home-nav {
+    font-size: 0.8em;
   }
 }
 
