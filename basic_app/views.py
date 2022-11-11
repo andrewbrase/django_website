@@ -1,10 +1,3 @@
-# from __future__ import print_function
-# mail
-# import time
-# import sib_api_v3_sdk
-# from sib_api_v3_sdk.rest import ApiException
-# from pprint import pprint
-
 from django.shortcuts import render, redirect
 from basic_app.forms import UserForm, UserProfileInfoForm, ContactForm
 
@@ -14,6 +7,9 @@ from django.http import HttpResponseRedirect, HttpResponse
 from django.urls import reverse
 # if you want a user to be logged in before seeing a view, use login_required
 from django.contrib.auth.decorators import login_required
+
+# email
+
 
 # Create your views here.
 
@@ -117,11 +113,6 @@ def contact(request):
             subject = contact_form.cleaned_data["subject"]
             message = contact_form.cleaned_data['message']
             from_email = request.user.email
-
-            print(subject)
-            print(message)
-            print(from_email)
-            # sendinblue/APIv3
 
             completed = True
 

@@ -5,7 +5,7 @@ from django.core import validators
 
 class UserForm(forms.ModelForm):
     username = forms.CharField(label='Username:', max_length=25,widget=forms.TextInput(attrs={'placeholder': 'Username', 'required': 'true'}))
-    email = forms.CharField(label='Email:', max_length=50, widget=forms.TextInput(attrs={'placeholder': 'example@domain.com', 'required': 'true'}))
+    email = forms.CharField(label='Email:', max_length=50, widget=forms.TextInput(attrs={'placeholder': 'example@gmail.com', 'required': 'true'}))
     password = forms.CharField(label='Password:', max_length=50, widget=forms.PasswordInput(attrs={'placeholder': 'Password', 'required': 'true'}))
     confirm_password=forms.CharField(max_length=50, widget=forms.PasswordInput(attrs={'placeholder': 'Verify Password', 'required': 'true'}))
     botcatcher = forms.CharField(required=False, widget=forms.HiddenInput, validators=[validators.MaxLengthValidator(0)])
