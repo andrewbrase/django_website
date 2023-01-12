@@ -14,6 +14,7 @@
     <!-- base template for the pages, this includes the nav bar and links -->
     <nav id="nav">
         <ul>
+            <div class="items">
             <li><a href="{% url 'basic_app:home' %}">Home</a></li>
 
             <!-- Sign in and sign out depending on the current status of the user -->
@@ -30,8 +31,11 @@
             {% if user.is_authenticated %}
             <li><a href="{% url 'basic_app:contact' %}">Contact</a></li>
             {% endif %}
+            </div>
 
             <hr>
+            
+            <div class="items">
             <!-- for the staff users there's a link directly to the admin interface -->
             {% if user.is_staff %}
             <li><a href="{% url 'admin:index' %}">Admin</a></li>
@@ -47,6 +51,7 @@
             <li>Sign in for more features</li>
             {% endif %}
         </ul>
+        </div>
     </nav>
 
     <!-- this is where every page that uses this base template will be inserted -->

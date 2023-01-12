@@ -70,4 +70,11 @@ body .visit a:hover {
   text-decoration: underline;
 }
 
+@media (orientation: portrait), (max-width: 500px) {
+  body .signin-cont {
+    margin-top: 20%;
+    min-width: 300px;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */

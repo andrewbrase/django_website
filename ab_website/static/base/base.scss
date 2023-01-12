@@ -129,10 +129,16 @@ body {
         input {
             font-size: .8em;
         }
-        textarea {
-            resize: none;
-            width: 50%;
-            font-size: .8em;
+        form {
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+
+            textarea {
+                resize: none;
+                width: 90%;
+                font-size: .8em;
+            }
         }
     }
 }
@@ -143,6 +149,15 @@ body {
     body {
         nav {
             font-size: .8em;
+        }
+
+        ul {
+            // background-color: rgb(107, 50, 50);
+
+            .items {
+                // background-color: gray ;
+                margin-right: 38px;
+            }
         }
 
         .user {

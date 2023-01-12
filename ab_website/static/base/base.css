@@ -2,6 +2,7 @@
   font-family: externalFont;
   src: url(../fonts/Questrial-Regular.ttf);
 }
+
 body {
   font-size: 1.5em;
   font-family: externalFont;
@@ -70,6 +71,11 @@ body .visit a:hover {
   text-decoration: underline;
 }
 
+@media (orientation: portrait), (max-width: 500px) {
+  body .signin-cont {
+    min-width: 300px;
+  }
+}
 html {
   scroll-behavior: smooth;
 }
@@ -176,15 +182,23 @@ body .cont .link:hover {
 body .cont input {
   font-size: 0.8em;
 }
-body .cont textarea {
+body .cont form {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+body .cont form textarea {
   resize: none;
-  width: 50%;
+  width: 90%;
   font-size: 0.8em;
 }
 
 @media (orientation: portrait), (max-width: 1108px) {
   body nav {
     font-size: 0.8em;
+  }
+  body ul .items {
+    margin-right: 38px;
   }
   body .user {
     font-size: 0.9em;

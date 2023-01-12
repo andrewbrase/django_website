@@ -98,3 +98,11 @@ body {
     }
 }
 
+@media (orientation: portrait),
+(max-width:500px) {
+    body {
+        .signin-cont {
+            min-width: 300px;
+        }
+    }
+}
